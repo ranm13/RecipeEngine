@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head><meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Bootcamp Recipe</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <script src="./handlebars/dist/handlebars.js"></script>
+    <script src="./jquery/dist/jquery.js"></script>
+</head>
+<body>
+    <img id="header-image" src="https://img.freepik.com/free-vector/coloured-chefdesign_1152-72.jpg?size=338&ext=jpg" alt="chef" width="150px">
+    <h1>Recipes Generator</h1>
+    <div id="container"></div>
+        <div id="search-container">
+            <input type="text" id="ingerdient-input" placeholder="Choose an ingredient">
+            <button onclick="controler.fetchRecipesData()">Search</button>
+        </div>
+        <div id="recipes-container">
+        </div>
+    </div>
+
+    <script id="recipes-template" type="text/x-handlebars-template">
+        {{#each response}}
+        <div class="recipe">
+            <div class="link-container">
+                <a href="{{href}}" target="_blank"> {{title}}</a>
+            </div>
+            <div class = "img-container">
+                <img class="recipes-image" src="{{thumbnail}}">
+            </div>
+            <p>ingredients</p>
+            <ul class="ingredients-list">
+                {{#each ingredients}}
+                <li>{{this}}</li>
+                {{/each}}
+            </ul>
+        </div>
+        {{/each}}
+    </script>
+    <script src="Renderer.js"></script>  
+    <script src="main.js"></script>
+</body>
+
+</html>
+
+
