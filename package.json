@@ -19,7 +19,7 @@
   "homepage": "https://github.com/ranm13/Proficiency-Exam#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "handlebars": "^4.3.0",
+    "handlebars": "^4.5.3",
     "jquery": "^3.5.0",
     "request": "^2.88.0"
   }
